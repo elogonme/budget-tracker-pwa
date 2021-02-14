@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- stable
+npm: true
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: RyGy+1DM2UO02kx25Rlw3R+2xEdVZYe6uEjwcVnYwedoJ0WT7CjWMwUHvRv+lO5JV1Ftm7AAIB7caYVPhPTtG+lKerRHjzcmi+rZ/g9QOvybgd8ak0XUiH7nGgn7/TEPNbWlQ0YX6Lu95XHiWq6d9YR5J5WdcWbPqNWmHOBFAtBoL34IY9gsSd8w0S4lm8ft+gqwdG0izCy3ZDgN5HORo2xyqvD/GClHB565OcEPKb2TBSgSpI0saJB6TimwAYUKsuJnB7X9rD+EN4e6NTDhY5tUk7IqctndNqiAFvdbMpNNKsTnVDIFuMo0PPzVLg0+Iri0aFXgNtnHe1Vp3Gzb3toACyOeDwhfyECM1AIJ4iAAr862fhgYyP3jkhTGMcT2swF6vS0sjdiYhsmJRCIG6bY/eQ+mrFT5rvH1r5SwE6/CNZ315n5Bo4I+Yikziy+Y0VXAp9M+djQGV6GudE/Y12JXldLTHAgMb53B6RJ9/6EnrihgIiOUZ245mozyVpON9wXirMXkv+3q9XNjfr483mBNIZdAAOMUNIc1h0IXGpYrCAd5CUJylJoJxxDGkyi7GmRZipnuwPQlRBD6+XcU9eZsU3CGcMCulOExTMGdwgxaaMBdNK1EOk+pvH4naxoHOvy3Yo5QN8wzpuozsEOvgeNOTuHRwhRUFqaT1RLNhxQ=
+  app: budget-track-pwa-app
+  on:
+    repo: elogonme/budget-tracker-pwa
+    branch: main
+  skip_cleanup: 'true'
