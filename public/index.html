@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="manifest" href="manifest.webmanifest">
   <title>Budget Tracker</title>
+  <meta name="keywords" content="budget tracker, planning, pwa, full-stack">
+  <meta name="description" content="Budget tracking application PWA, working offiline too!">
 </head>
 <body>
   <div class="wrapper">
@@ -47,7 +49,7 @@
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("service-worker.js").then(reg => {
-          console.log("We found your service worker file!", reg);
+          // console.log("We found your service worker file!", reg);
         });
       });
     }
