@@ -3,12 +3,17 @@
   "name": "Budget Tracker",
   "icons": [
     {
-      "src": "/img/icons/icon-192x192.png",
-      "sizes": "192x192",
+      "src": "assets/img/icons/icon_64px.png",
+      "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "/img/icons/icon-512x512.png",
+      "src": "assets/img/icons/icon_128px.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/icons/icon_512px.png",
       "sizes": "512x512",
       "type": "image/png"
     }
