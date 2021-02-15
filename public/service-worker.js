@@ -6,8 +6,9 @@ const FILES_TO_CACHE = [
   '/assets/js/index.js',
   '/manifest.webmanifest',
   '/assets/img/icons/icon_64px.png',
-  '/assets/img/icons/icon_128px.png',
+  '/assets/img/icons/icon_192px.png',
   '/assets/img/icons/icon_512px.png',
+  '/assets/img/icons/apple-touch-icon.png'
 ];
 
 const CACHE_NAME = 'static-cache-v2';
@@ -16,10 +17,7 @@ const DATA_CACHE_NAME = 'data-cache-v1';
 // install
 self.addEventListener('install', (evt) => {
   evt.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('Files were pre-cached successfully!');
-      return cache.addAll(FILES_TO_CACHE);
-    }),
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(FILES_TO_CACHE))
   );
 
   self.skipWaiting();
