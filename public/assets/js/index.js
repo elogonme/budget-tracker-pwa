@@ -26,10 +26,14 @@ function populateTable() {
 
   transactions.forEach((transaction) => {
     // create and populate a table row
+    let rowColor;
+    if (transaction.value < 0) {
+      rowColor = 'negative';
+    } else rowColor = 'positive';
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td>${transaction.name}</td>
-      <td>${transaction.value}</td>
+      <td class="${rowColor}">${transaction.name}</td>
+      <td  class="${rowColor}">${transaction.value}</td>
     `;
 
     tbody.appendChild(tr);
