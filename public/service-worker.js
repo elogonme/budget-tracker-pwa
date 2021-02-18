@@ -5,7 +5,6 @@ const FILES_TO_CACHE = [
   '/',
   '/index.html',
   '/assets/css/styles.css',
-  '/dist/db.bundle.js',
   '/dist/index.bundle.js',
   '/dist/manifest.json',
   '/dist/assets/icons/icon_40x40.png',
@@ -69,7 +68,6 @@ self.addEventListener('fetch', (evt) => {
         // Network request failed, try to get it from the cache.
           cache.match(evt.request))).catch((err) => console.log(err)),
     );
-
     return;
   }
 

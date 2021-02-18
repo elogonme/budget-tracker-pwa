@@ -7,7 +7,6 @@ const config = {
 
   entry: {
     index: '/public/assets/js/index.js',
-    db: '/public/assets/js/db.js',
   },
   output: {
     path: `${__dirname}/public/dist`,
