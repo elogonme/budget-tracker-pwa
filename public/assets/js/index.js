@@ -1,3 +1,6 @@
+/* eslint-disable linebreak-style */
+import { useIndexedDb, checkDatabase } from './indexedDB';
+
 let transactions = [];
 let myChart;
 
@@ -6,7 +9,6 @@ fetch('/api/transaction')
   .then((data) => {
     // save db data on global variable
     transactions = data;
-
     populateTotal();
     populateTable();
     populateChart();
@@ -133,7 +135,7 @@ function sendTransaction(isAdding) {
     .catch((err) => {
     // fetch failed, so save in indexed db
       console.log('Fetch failed, saving to IndexedDB');
-      saveRecord(transaction);
+      useIndexedDb('budget', 'pending', 'add', transaction);
 
       // clear form
       nameEl.value = '';
@@ -148,3 +150,6 @@ document.querySelector('#add-btn').onclick = function () {
 document.querySelector('#sub-btn').onclick = function () {
   sendTransaction(false);
 };
+
+// listen for app coming back online
+window.addEventListener('online', checkDatabase);
